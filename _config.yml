@@ -1,7 +1,7 @@
 # Site settings
 # Enter your own credentials here
 title: "MIC-Tungsten-Nanowires"
-email: jallen30@gatec.edu
+email: jallen30@gatech.edu
 description: >
   Tell us about your site
 baseurl: "/MIC-Tungsten-Nanowires" # replace ``/research-pages`` with the name of the parents repository
