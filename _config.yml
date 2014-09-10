@@ -1,8 +1,7 @@
 # Site settings
 # Enter your own credentials here
 title: "MIC-Tungsten-Nanowires"
-email1: jallen30@gatech.edu
-email2: yzhao314@gmail.com
+email: jallen30@gatech.edu
 description: >
   This site is dedicated to work on extracting process-structure linkages for 
   tungsten nanowire shell formation by digitization of the microstructure to capture the porosity formation 
