@@ -9,7 +9,7 @@ description: >
 baseurl: "/MIC-Tungsten-Nanowires" # replace ``/research-pages`` with the name of the parents repository
 url: "jallen30gt.github.io" # replate ``Materials-Informatics-Lab`` with your Github username
 twitter_username: twitterhandle
-disqus: hello
+disqus: jallen30gt
 
 # Build settings
 markdown: kramdown
