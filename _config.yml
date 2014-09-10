@@ -4,7 +4,7 @@ title: "MIC-Tungsten-Nanowires"
 email: jallen30@gatech.edu
 description: >
   This site is dedicated to work on extracting process-structure evolution linkages for 
-  tungsten shell formation by digitizing the microstructure to capture the porosity formation 
+  tungsten nanowire shell formation by digitization of the microstructure to capture the porosity formation 
   and evolution.
 baseurl: "/MIC-Tungsten-Nanowires" # replace ``/research-pages`` with the name of the parents repository
 url: "jallen30gt.github.io" # replate ``Materials-Informatics-Lab`` with your Github username
