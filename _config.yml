@@ -5,7 +5,7 @@ email: jallen30@gatech.edu
 description: >
   Tell us about your site
 baseurl: "/MIC-Tungsten-Nanowires" # replace ``/research-pages`` with the name of the parents repository
-url: "jallen30gt" # replate ``Materials-Informatics-Lab`` with your Github username
+url: "jallen30gt.github.io" # replate ``Materials-Informatics-Lab`` with your Github username
 twitter_username: twitterhandle
 disqus: jallen30gt
 
@@ -18,7 +18,7 @@ paginate: 5
 
 
 gh:
-  user: Materials-Informatics-Lab
-  repo: research-pages
+  user: jallen30gt
+  repo: MIC-Tungsten-Nanowires
   # Branch hosting Github pages
   branch: gh-pages
