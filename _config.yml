@@ -1,13 +1,13 @@
 # Site settings
 # Enter your own credentials here
-title: "My Blog"
-email: you@somewhere.com
+title: "MIC-Tungsten-Nanowires"
+email: jallen30@gatec.edu
 description: >
   Tell us about your site
-baseurl: "/research-pages" # replace ``/research-pages`` with the name of the parents repository
-url: "Materials-Informatics-Lab.github.io" # replate ``Materials-Informatics-Lab`` with your Github username
+baseurl: "/MIC-Tungsten-Nanowires" # replace ``/research-pages`` with the name of the parents repository
+url: "jallen30gt" # replate ``Materials-Informatics-Lab`` with your Github username
 twitter_username: twitterhandle
-disqus: tonyfast
+disqus: jallen30gt
 
 # Build settings
 markdown: kramdown
