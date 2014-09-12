@@ -1,0 +1,35 @@
+origin:
+  name: Maryana Kovalchuk-Nave 
+  institution: Clemson University
+  email: mkovalc@g.clemson.edu
+  
+data:
+- file-format: Microsoft XRM
+  dimensions: 2
+- file-format: Microsoft tXRM
+  dimensions: 3
+- obtained: Precipitation Limited Electropolishing (PLE)
+  medium: Electroylyte (KOH)
+  anode: tungsten
+  shell-formation: Tungsten Tri-Oxide Hydrate - Not sure about what type of hydrate
+  
+2D-in-time-Tomography-Data:
+- Conditions: in KOH
+  Concentration: 1M KOH
+  Potential-Difference: 1.55 V
+  Diameter: 75 micrometers
+- Description: Tungsten Tri-Oxide Hydrate 
+  Hydrate: Not sure about what type of hydrate
+  Layers: Possible multiple layers with varying tunsten compounds
+  Oxidation States: Possible 8 states 
+- Optical-Data: 
+ 
+2D-Tomography-Data:
+- Conditions: in air
+  Potential-Difference: 2V
+  Diameter: 125 micrometers
+  
+Raw-data:
+- Image-size: 129 images, subject to change depending on data given
+- Exposure-time: 1 second
+- Analaysis: Has not been analyzed
