@@ -4,10 +4,8 @@ title: "MIC-Tungsten-Nanowires"
 email: jallen30@gatech.edu
 email2: yzhao314@gmail.com
 description: >
-  This site is dedicated to work on extracting process-structure linkages for 
-  tungsten nanowire shell f
-  ormation by digitization of the microstructure to capture the porosity formation 
-  and evolution.
+  This site is dedicated to work on extracting process-structure linkages for the
+  electrochemical evolution of tungsten-oxide-hydrate layers on a tungsten wire surface.
 baseurl: "/MIC-Tungsten-Nanowires" # replace ``/research-pages`` with the name of the parents repository
 url: "jallen30gt.github.io" # replate ``Materials-Informatics-Lab`` with your Github username
 twitter_username: twitterhandle
