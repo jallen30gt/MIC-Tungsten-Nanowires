@@ -1,20 +1,13 @@
 # About this Repository
 
-``research-pages`` is a boilerplate Github Repository containing a Github Pages template ready to be interpretted by Jekyll.  ``research-pages`` are meant to be used during ongoing scientific research to provide centralized reporting, code sharing, data sharing, and discussion.
+This repository will serve as a central resource for a project regarding the Electrochemical evolution of tungsten-oxide-hydrate layers on tungsten wire surface. This project is an application of the information we are learning in the ME8883/CSE8803 Materials Informatics course at the Georgia Institute of Technology.
 
-# Use this code
+This course uses and applies data science to produce and evaluate process-structure-property linkages for the above mentioned project.
 
-1. Fork this repository
-  
-  *You can rename the repository once you have forked it.*
+# About this Branch
 
-2. Change values in ``_config.yml``
+The ""gh-pages"" branch of a Github repository provides a web hosting service for its underlying content. This course's project content will be served through Github because it provides a very close interconnection between codes, data, publication, and colaboration.
 
-# Jekyll for Science
 
-This repository is designed to make web hosting of scientific research much easier.  On top of the Jekyll boilerplate, we have added
 
-* [Bootstrap](http://getbootstrap.com) for styling
-* [MathJax](www.mathjax.org) for equations
-* [JQuery](www.jquery.com) for client side manipulations
-* [Octicons](https://octicons.github.com/) for Github hub's glyhpicons
+
