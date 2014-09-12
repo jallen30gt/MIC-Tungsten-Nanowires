@@ -6,7 +6,7 @@ This course uses and applies data science to produce and evaluate process-struct
 
 # About this Branch
 
-The ""gh-pages"" branch of a Github repository provides a web hosting service for its underlying content. This course's project content will be served through Github because it provides a very close interconnection between codes, data, publication, and colaboration.
+The "gh-pages" branch of a Github repository provides a web hosting service for its underlying content. This course's project content will be served through Github because it provides a very close interconnection between codes, data, publication, and colaboration.
 
 
 
