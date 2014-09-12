@@ -1,4 +1,4 @@
-# ``research-pages``
+# About this Repository
 
 ``research-pages`` is a boilerplate Github Repository containing a Github Pages template ready to be interpretted by Jekyll.  ``research-pages`` are meant to be used during ongoing scientific research to provide centralized reporting, code sharing, data sharing, and discussion.
 
