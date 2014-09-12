@@ -2,7 +2,7 @@
 # Enter your own credentials here
 title: "MIC-Tungsten-Nanowires"
 email: jallen30@gatech.edu
-email2: ja@gatech.edu
+email2: yzhao314@gmail.com
 description: >
   This site is dedicated to work on extracting process-structure linkages for 
   tungsten nanowire shell f
@@ -23,6 +23,7 @@ paginate: 5
 
 gh:
   user: jallen30gt
+  user2: yzhao314 
   repo: MIC-Tungsten-Nanowires
   # Branch hosting Github pages
   branch: gh-pages
