@@ -30,7 +30,10 @@ data:
   Diameter: 125 micrometers
   
 Raw-data:
-- Image-size: 129 images, subject to change depending on data given
+- Image-size: 155 images
 - Exposure-time: 1 second
 - Analaysis: Has not been analyzed
+- Resolution: 40 microns x 40 microns
+- Resolution-change: none
+- Pixel-size: 38.9nm
  
