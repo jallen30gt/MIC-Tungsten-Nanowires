@@ -5,6 +5,32 @@ tagline: Presentation Matlab results from first pre-processing and image filteri
 
 images: 
   host: https://raw.githubusercontent.com/jallen30gt/MIC-Tungsten-Nanowires/gh-pages/assets/starterimages/
+  src:
+  - 00600000.jpg.png
+  - 00600075.jpg.png
+  - 00600076.jpg.png
+  - 00600077.jpg.png
+  - 00600078.jpg.png
+  - 00600079.jpg.png
+  - 00600080.jpg.png
+  - 00600081.jpg.png
+  - 00600154.jpg.png
 ---
 
-{{page.images}}
+# Surface Analysis
+
+A [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created to indentify the interfaces
+in CT images to indentify the surfaces.
+
+## Workflow
+
+* Filter
+* Peak Find
+
+## Interface Overlaps
+
+{% for src in page.images.src %}
+### {{src}}
+
+![{{src}}]({{page.images.host}}{{src}})
+{% endfor %}
