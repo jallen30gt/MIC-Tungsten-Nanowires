@@ -5,6 +5,7 @@ tagline: Presentation Matlab results from first pre-processing and image filteri
 
 images: 
   host: https://raw.githubusercontent.com/jallen30gt/MIC-Tungsten-Nanowires/gh-pages/assets/starterimages/
+  gh: https://github.com/jallen30gt/MIC-Tungsten-Nanowires/tree/gh-pages/assets/starterimages/
   src:
   - 00600000.jpg.png
   - 00600075.jpg.png
@@ -32,5 +33,5 @@ in CT images to indentify the surfaces.
 {% for src in page.images.src %}
 ### {{src}}
 
-![{{src}}]({{page.images.host}}{{src}})
+[![{{src}}]({{page.images.host}}{{src}})]({{page.images.gh}}{{src}})
 {% endfor %}
