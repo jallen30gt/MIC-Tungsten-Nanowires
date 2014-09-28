@@ -18,12 +18,21 @@ images:
   - 00600154.jpg.png
   
 references:
+- http://imagej.nih.gov/ij/
 - http://www.csse.uwa.edu.au/~pk/Research/MatlabFns/Spatial/derivative7.m # A stable derivative function
 - http://www.mathworks.com/help/images/ref/medfilt2.html # Median Filter Documentation
 ---
 
 
 # Surface Analysis
+
+Initial processing of images was conducted using [Image J](http://imagej.nih.gov/ij/).  All images are in [grayscale](http://en.wikipedia.org/wiki/Grayscale)
+which aids in the ease of image processing (unlike the [CMYK color model](http://en.wikipedia.org/wiki/CMYK_color_model) which 
+uses more data layers and thus includes more information that must be processed). [Line plots](http://www.icoachmath.com/math_dictionary/line_plot.html)
+were created to measure the inverted gray scale of all pixels across the width of the image.  As the [2-D tomography](http://en.wikipedia.org/wiki/Electron_tomography)
+data is a measure of the intensities of detected electrons through the material, it is our hope that the line plots may give us 
+information about the transition zones around the surface of the tungsten wire sample.  Below is the initial line diagrams
+(rough and unprocessed) for the sample at 0%, 50% and 100% through the tungsten-trioxide-hydrate growth process.
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/39627385" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
