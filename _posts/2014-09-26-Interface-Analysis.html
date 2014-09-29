@@ -63,7 +63,7 @@ The results shown below are for smoothing applied *50 times*:
 <br>
 <br>
 
-#What did we learn?
+##What did we learn?
 
 From this, we found that 10 applications of the simple smoothing algorithm did a sufficient job of smoothing the function. 
 However, the first and second derivative data are much more sensitive and need higher applications of smoothing.  500 applications
@@ -71,7 +71,7 @@ did a very nice job, however, too much smoothing tends to eliminate adjacent pea
 towards the same value.  We have also identified that in this point in time, we may not have much use for the second derivative; 
 this could be evaluated later if we find  
 
-#What we did next
+##What we did next
 A second [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created to identify 
 the interfaces in 2-D tomography images. This program advances some of the mathematical techniques used from our first program
 and was written in collaboration with Tony Fast. Several features are different as will be discussed next.
@@ -84,12 +84,15 @@ and was written in collaboration with Tony Fast. Several features are different 
 * Peaks were identified through dilation of the images and the peaks mapped to and identified on the original images 
 
 <br>
+
+## Interface Overlaps
 The outcome of the second round of and more advanced image processing are shown below:
+<br>
 <br>
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/39630963" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
-## Interface Overlaps
+
 
 {% for src in page.images.src %}
 ### {{src}}
@@ -98,7 +101,7 @@ The outcome of the second round of and more advanced image processing are shown 
 {% endfor %}
 
 
-#What is our biggest problem?
+##What is our biggest problem?
 
 Right now it appears that our biggest problems are:
 * Better understand where we are in our process ([previous benchmarks](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/project/identification/2014/09/15/Materials-Description.html) too ambitious?)
@@ -106,14 +109,14 @@ Right now it appears that our biggest problems are:
 * We need to see if we need to extend the number of local maximas from the first derivative to really capture the interfaces
 
 
-#What can we do now?
+##What can we do now?
 
 Right now we can:
 * Continue working with Tony's matlab script to further process all images
 * Play with different filters, derivative, dilations, color schemes, etc.
 
 
-#What can we do within two weeks?
+##What can we do within two weeks?
 * Complete initial and advanced image processing
 * Identify microstructure features
 
