@@ -19,6 +19,7 @@ images:
   
 references:
 - http://imagej.nih.gov/ij/
+- http://www.originlab.com/index.aspx?go=Products/Origin/DataAnalysis/SignalProcessing/SmoothingAndFitting&pid=62
 - http://www.csse.uwa.edu.au/~pk/Research/MatlabFns/Spatial/derivative7.m # A stable derivative function
 - http://www.mathworks.com/help/images/ref/medfilt2.html # Median Filter Documentation
 ---
@@ -40,8 +41,14 @@ information about the transition zones around the surface of the tungsten wire s
 
 <br>
 
-A [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created to indentify the interfaces
-in CT images to indentify the surfaces.
+A [Matlab code](https://gist.github.com/jallen30gt/8254e9ea2f938363dc0b) was developed to begin the initial processing of images.
+The code was written with blank objectives in mind:
+1) [Smooth](http://en.wikipedia.org/wiki/Smoothing) noise in images (done with a simple adjacent point averaging at 10 and 500 times application).
+2) Find the First Derivative
+3) Find the Second Derivative
+
+A second [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created to indentify 
+the interfaces in CT images to indentify the surfaces.
 
 ## Workflow
 
