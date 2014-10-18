@@ -9,4 +9,12 @@ references:
 
 ---
 
-{{site.data.segmentation data[1]}}
+<ul>
+{% for segmentation in site.data.segmentation %}
+  <li>
+    <a>
+      {{ segmentation.segmentation data }}
+    </a>
+  </li>
+{% endfor %}
+</ul>
