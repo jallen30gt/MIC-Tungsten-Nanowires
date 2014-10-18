@@ -1,8 +1,8 @@
 {
   "segmentation data":
       {
-        "Image": 155
-        "Number of Peaks": 7
+        "Image": 155,
+        "Number of Peaks": 7,
         "Number of Bins": 250
         
       }  
