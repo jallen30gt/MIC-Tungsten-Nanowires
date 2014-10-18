@@ -9,6 +9,4 @@ references:
 
 ---
 
-{% for segment in site.data.segmentation %}
-{{ segment.segment }}
-{% endfor %}
+{{site.data['segmentation']}}
