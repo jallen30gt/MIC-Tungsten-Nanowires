@@ -17,9 +17,198 @@ references:
 -  http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/09/26/Interface-Analysis.html
 ---
 
-
 # Clemson Project Update
 
 ## Initial Surface Analysis
 
+Initial processing of images was conducted using [Image J](http://imagej.nih.gov/ij/), an Image and Analysis program developed at the National Institute of Health.  All images are in [grayscale](http://en.wikipedia.org/wiki/Grayscale)
+which aids in the ease of image processing (unlike the [CMYK color model](http://en.wikipedia.org/wiki/CMYK_color_model) which 
+uses more data layers and thus includes more information that must be processed). [Line plots](http://www.icoachmath.com/math_dictionary/line_plot.html)
+were created to measure the inverted gray scale of all pixels across the width of the image.  As the [2-D tomography](http://en.wikipedia.org/wiki/Electron_tomography)
+data is a measure of the intensities of detected electrons through the material, it is our hope that the line plots may give us 
+information about the transition zones around the surface of the tungsten wire sample.  Below is the initial line diagrams
+(rough and unprocessed) for the sample at 0%, 50% and 100% through the tungsten-trioxide-hydrate growth process.
 
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/39731430" width="425" height="355" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe> 
+
+
+
+## Stepping up the level of analysis 
+
+A [Matlab code](https://gist.github.com/jallen30gt/8254e9ea2f938363dc0b) was developed to begin the initial processing of images.
+The code was written with three simple objectives in mind:
+
+1.  [Smooth](http://en.wikipedia.org/wiki/Smoothing) noise in images (done with a simple adjacent point averaging at 10 and 500 times application).
+2.  Find the [First Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
+3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
+
+
+<table>
+<tr>
+  <td align="center">The results shown below are for smoothing applied <b>10 times</b>:</td>
+  <td align="center">The results shown below are for smoothing applied <b>500 times</b>:</td>
+</tr>
+  <tr>
+    <td><iframe src="//www.slideshare.net/slideshow/embed_code/39731450" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></td>
+    <td><iframe src="//www.slideshare.net/slideshow/embed_code/39731465" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe></td>
+  </tr>
+</table>
+
+
+
+##What did we learn?
+
+From this, we found that 10 applications of the simple smoothing algorithm did a sufficient job of smoothing the function. 
+However, the first and second derivative data are much more sensitive and need higher applications of smoothing.  500 applications
+did a very nice job, however, too much smoothing tends to eliminate adjacent peaks and tends to move slopes from the raw data
+towards the same value.  We have also identified that in this point in time, we may not have much use for the second derivative; 
+this could be evaluated later if we find  
+
+##What we did next
+A second [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created to identify 
+the interfaces in 2-D tomography images. This program advances some of the mathematical techniques used from our first program
+and was written in collaboration with Tony Fast. Several features are different as will be discussed next.
+
+## Workflow
+
+*  [Matlab's 2-D median filtering](http://www.mathworks.com/help/images/ref/medfilt2.html) applied to smooth data
+*  [Derivative7](http://www.csse.uwa.edu.au/~pk/Research/MatlabFns/Spatial/derivative7.m) function was used to find the first derivatives
+*  [Matlab's imdilate function](http://www.mathworks.com/help/images/ref/imdilate.html) was used to [dialte](http://en.wikipedia.org/wiki/Dilation_(morphology))(i.e., find local maximum values) images
+*  Peaks were identified through dilation of the images and the peaks mapped to and identified on the original images 
+
+
+
+## Interface Overlaps
+The outcome of the second round of and more advanced image processing are shown below:
+
+
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/39630963" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
+
+# Time Evolution of Raw Data 
+
+Second step of image processing is the evolve of layer overtime, we plot different region of the image against time 
+and hopefully it can give us more information about the layer evolve and, like when it is actually occur and how it is 
+evolved. The first thing we do is plug the average pixel value (from rows 500 to 600) of each column overtime, we have 
+1024 columns so we got 1024 graphs, each graph has average pixel value as y and the time as x. We can see at the 
+beginning of the graph there is no trend, which is as expected because the layer most likely to found in the middle 
+region of the image. As we keep moving right to the image, we can see clearly a shape represent the image evolve. 
+It actually looks exactly like exponential function, and then change to a logistic function. I cannot figure 
+out a precise function yet to describe this process overtime, but I believe that will be a valid next step.
+<br>
+<br>
+
+Evolution of <b>columns 1-10</b> with time are shown below:
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/40270157" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
+Evolution of <b>columns 448-468</b> with time are shown below:
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/40270198" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
+Evolution of <b>columns 555-580</b> with time are shown below:
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/40270227" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+# Time Derivative of Raw Data 
+
+We also take the derivative of the data with time, but the resulting plot does not have obviously imformation as it is 
+extremely noisy. We have to figure out a better filter and smoothing function to make that part useful, cause it can be 
+useful as anvalid evidence for use to figure out the layer evolve function.
+
+
+
+
+# Peak Position Time Evolution
+
+Another interesting found is by ploting the location of peak (the place where change is the most dramatic). Over time, 
+we can see the location have a almost linear down trend, but he maximum value(the change that happen between different 
+column) has a linear trend of increase, we will discuss more about it and figure out what does that mean to us .
+
+![Alt text](http://i.imgur.com/2s5N7Cf.png "Peak Position as a Function of Time")
+
+![Alt text](http://i.imgur.com/7SwXpgx.png "Peak Amplitude as a Function of Time")
+
+
+# Geometry of Derivatives?
+
+By taking the derivative of the pictures, we can see at the beginning, the peak of the graph must represent layers, the 
+peak region is almost like a rectangular. Then as time goes on, the peak region become more like a triangle, is that 
+because there will only be one layer at the end? 
+
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/40276563" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/40276585" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
+
+
+
+
+
+# Initial Attempts at Data Segmentation
+
+For this trail run at segmentation, I used the matlab code developed by [Dr. Tom O'Haver ](http://terpconnect.umd.edu/~toh/) for 
+peak fitting and the [naive segmentation](https://gist.github.com/tonyfast/de3d7b841cea38dc40fa) code written by Tony. I also 
+used different matlab filters and smoothing functions to smooth the data (imfilter in tandom with fspecial, imresize, wiener2).
+I varied the number of peaks between 3 and 8 and varied the number of bins from 10 to 1000. This provided extremely tedious. 
+For this post, I settled for an image capture with the following values:
+
+__{{site.data['segmentation']}}__
+
+This image shows my initial efforts with the image truncated to the area of interest:
+
+![Segmentation Image](http://i.imgur.com/MH8CuxO.jpg "Segmentation image ran with 7 peaks and 250 bins")
+
+
+
+The image has been cropped to focus on a region of interest; that which we suspect is the evolvoing tri-oxide hydrate layer. 
+For comparison sake, here is the orinal image deliniating the area of interest.
+
+
+
+![Alt text](http://i.imgur.com/dExZKTw.jpg "Original image showing area of interest")
+
+
+
+
+As you can see, the peak finding and fitting have some not so nice errors associated with conditions input.
+
+
+
+![Alt text](http://i.imgur.com/RN7GadD.jpg "Segmentation histogram plot ran with 7 peaks and 250 bins")
+
+
+
+
+## How does this relate to what has been done?
+
+So, in reference to the segmented image, this image below represents the origianl image overlayed with the first spatial
+derivative [work we did a couple of weeks prior.](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/09/26/Interface-Analysis.html)
+
+
+
+
+![Alt text](http://i.imgur.com/Uk25D1G.jpg "Original image overlayed with first spatial derivative data")
+
+
+
+
+I believe it is interesting to note that there whether we are taking numerical derivatives over the data or segmenting the data,
+we find a simialar trend in this tri-oxide hydrate layer. 
