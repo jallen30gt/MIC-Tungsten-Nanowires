@@ -4,6 +4,7 @@ title: Clemson Project Progress Report
 author: jallen30gt
 date:   2014-10-25 00:30:00
 tagline: Presentation Matlab results from first pre-processing and image filtering attempts
+latex: true
 
 references:
 -  http://imagej.nih.gov/ij/
@@ -45,6 +46,7 @@ A [Matlab code](https://gist.github.com/jallen30gt/8254e9ea2f938363dc0b) was dev
 images. The code was written with three simple objectives in mind:
 
 1.  [Smooth](http://en.wikipedia.org/wiki/Smoothing) the noise in images (done with a simple [adjacent point averaging](http://www.originlab.com/doc/Origin-Help/Smooth-Algorithm) at 10 and 500 times application).
+    $$< x > = {x_i+1 + x_i-1}/2
 2.  Find the [First Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
 3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using c formulas)
 
