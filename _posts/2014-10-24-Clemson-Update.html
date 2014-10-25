@@ -7,7 +7,7 @@ tagline: Presentation Matlab results from first pre-processing and image filteri
 
 references:
 -  http://imagej.nih.gov/ij/
--  http://www.originlab.com/index.aspx?go=Products/Origin/DataAnalysis/SignalProcessing/SmoothingAndFitting&pid=62
+-  http://www.originlab.com/doc/Origin-Help/Smooth-Algorithm
 -  http://www.csse.uwa.edu.au/~pk/Research/MatlabFns/Spatial/derivative7.m # A stable derivative function
 -  http://www.mathworks.com/help/images/ref/medfilt2.html # Median Filter Documentation
 -  http://www.mathworks.com/help/images/ref/imdilate.html
@@ -37,15 +37,16 @@ surface of the tungsten wire sample and the evolvig tungsten-trioxide-hydrate la
 
 <br>
 
+As can be seen from the line plots, the data is quite noisey (and significantly so towards the edge of the images).  This is 
+important as this noise becomes relevant and needs to be reduced with regards to further image processing.  
 
 
+## Refining the Level of Analysis 
 
-## Stepping up the level of analysis 
+A [Matlab code](https://gist.github.com/jallen30gt/8254e9ea2f938363dc0b) was developed to refine the initial processing of 
+images. The code was written with three simple objectives in mind:
 
-A [Matlab code](https://gist.github.com/jallen30gt/8254e9ea2f938363dc0b) was developed to begin the initial processing of images.
-The code was written with three simple objectives in mind:
-
-1.  [Smooth](http://en.wikipedia.org/wiki/Smoothing) noise in images (done with a simple adjacent point averaging at 10 and 500 times application).
+1.  [Smooth](http://en.wikipedia.org/wiki/Smoothing) the noise in images (done with a simple [adjacent point averaging](http://www.originlab.com/doc/Origin-Help/Smooth-Algorithm) at 10 and 500 times application).
 2.  Find the [First Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
 3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
 
