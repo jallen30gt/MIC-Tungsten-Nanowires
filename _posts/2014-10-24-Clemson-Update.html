@@ -47,10 +47,16 @@ images. The code was written with three simple objectives in mind:
 
 1.  [Smooth](http://en.wikipedia.org/wiki/Smoothing) the noise in images (done with a simple [adjacent point averaging](http://www.originlab.com/doc/Origin-Help/Smooth-Algorithm) at 10 and 500 times application).
     <br>
+    <br>
             $$x_{avg} = \frac{x_{i+1} + x_{i-1}}{2}$$
-    
+    <br>
 2.  Find the [First Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
+    <br>
+            $$f^{''}(x_i)=\frac{-f(x_{i+2})+8f(x_{i+1})-8f(x_{i-1})+f(x_{i-2})}{12h}$$
+
 3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using c formulas)
+    <br>
+            $$f^{''}(x_i)=\frac{-f(x_{i+2})+16f(x_{i+1})-30f(x_i)+16(x_{i-1})-f(x_{i-2})}{12h^2}$$
 
 <br>
 <table>
