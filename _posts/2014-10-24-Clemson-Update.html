@@ -87,7 +87,13 @@ important features are:
 <br>
 
 The outputs of this algorithm can be seen below for data at 0% (time = 1s), approximately 50% (times = 76-82s) and 100% completion
-(time - 155s):
+(time - 155s).  Shown are the peaks of the first derivatives of the data taken acorss the width of each image for each
+individual row of the images (not averaged down each row such as was conducted in earlier analysis).  Each first derivative 
+peak (in a given row) is then mapped onto the image at the column position at which the peak was located.  As a point of 
+clarification, images are rotated 90 degrees counterclockwise from their initial orientation (as shown earlier) 
+and are cropped around the boundary region in an attempt to reduce the high noise levels (discussed earlier) at the edges 
+of the edges of the images. Thus, when the term row or column is used here, it is meant in relation to the original orienations
+shown earlier:
 <br>
 <br>
 
@@ -95,6 +101,7 @@ The outputs of this algorithm can be seen below for data at 0% (time = 1s), appr
 
 <br>
 
+Early in the time evolution, it can be seen that there is a large spread of data.
 
 # Time Evolution of Raw Data 
 
