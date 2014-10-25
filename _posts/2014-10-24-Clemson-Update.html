@@ -48,7 +48,7 @@ images. The code was written with three simple objectives in mind:
 
 1.  [Smooth](http://en.wikipedia.org/wiki/Smoothing) the noise in images (done with a simple [adjacent point averaging](http://www.originlab.com/doc/Origin-Help/Smooth-Algorithm) at 10 and 500 times application).
 2.  Find the [First Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
-3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
+3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using c formulas)
 
 <br>
 <table>
@@ -64,13 +64,14 @@ images. The code was written with three simple objectives in mind:
 
 <br>
 
-##What did we learn?
+## What Information was Garnered?
 
-From this, we found that 10 applications of the simple smoothing algorithm did a sufficient job of smoothing the function. 
-However, the first and second derivative data are much more sensitive and need higher applications of smoothing.  500 applications
-did a very nice job, however, too much smoothing tends to eliminate adjacent peaks and tends to move slopes from the raw data
-towards the same value.  We have also identified that in this point in time, we may not have much use for the second derivative; 
-this could be evaluated later if we find  
+Application of the simple smoothing algorithm 10 times did a sufficient job of smoothing the function.  However, the first and 
+second derivative algorithms are much more sensitive and need higher applications of smoothing as can be seen in the level of
+residual noise in the second first and second derivative plots.  Application of the simple smoothing algorithm 500 times
+did a very nice job of smoothing the data, but eliminates all of the interesting features of the plots.  Over-smoothing 
+tends to eliminate adjacent (split) peaks and tends to move slopes from the raw data towards the same value.   It was also 
+found that at this point in time, the second derivative of the data may not yield any important information.  
 
 ##What we did next
 A second [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created to identify 
