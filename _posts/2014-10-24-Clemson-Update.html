@@ -17,7 +17,7 @@ references:
 -  http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/09/26/Interface-Analysis.html
 ---
 
-## Initial Surface Analysis
+# Initial Surface Analysis
 
 Initial processing of images was conducted using [Image J](http://imagej.nih.gov/ij/), an image software package developed at
 the National Institute of Health.  All images have 1024 rows of pixels and 1024 columns of pixels with each pixel representing
@@ -71,22 +71,22 @@ did a very nice job of smoothing the data, but eliminates all of the interesting
 tends to eliminate adjacent (split) peaks and tends to move slopes from the raw data towards the same value.   It was also 
 found that at this point in time, the second derivative of the data may not yield any important information.  
 
-##What we did next
-A second [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created to identify 
-the interfaces in 2-D tomography images. This program advances some of the mathematical techniques used from our first program
-and was written in collaboration with Tony Fast. Several features are different as will be discussed next.
+## Further Refinement of Image Processing
 
-## Workflow
+A second [Matlab code](https://github.com/jallen30gt/MIC-Tungsten-Nanowires/blob/gh-pages/StartProj.m) was created in an attempt
+to identify the possible interfaces in the data images. This program advances some of the mathematical techniques used from the 
+previous code and was written in collaboration with Tony Fast. This code was written to advance the image analysis and the 
+important features are:
 
-*  [Matlab's 2-D median filtering](http://www.mathworks.com/help/images/ref/medfilt2.html) applied to smooth data
-*  [Derivative7](http://www.csse.uwa.edu.au/~pk/Research/MatlabFns/Spatial/derivative7.m) function was used to find the first derivatives
-*  [Matlab's imdilate function](http://www.mathworks.com/help/images/ref/imdilate.html) was used to [dialte](http://en.wikipedia.org/wiki/Dilation_(morphology))(i.e., find local maximum values) images
-*  Peaks were identified through dilation of the images and the peaks mapped to and identified on the original images 
+
+1.  [Matlab's 2-D median filtering](http://www.mathworks.com/help/images/ref/medfilt2.html) applied to smooth data
+2.  [Derivative7](http://www.csse.uwa.edu.au/~pk/Research/MatlabFns/Spatial/derivative7.m) function was used to find the first derivatives
+3.  [Matlab's imdilate function](http://www.mathworks.com/help/images/ref/imdilate.html) was used to [dialte](http://en.wikipedia.org/wiki/Dilation_(morphology))(i.e., find local maximum values) images
+4.  Peaks were identified through dilation of the images and the peaks mapped to and identified on the original images 
 
 <br>
 
-## Interface Overlaps
-The outcome of the second round of and more advanced image processing are shown below:
+The outputs of this algorithm can be seen below:
 <br>
 <br>
 
