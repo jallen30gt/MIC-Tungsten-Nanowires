@@ -33,7 +33,6 @@ information about the transition zones around the surface of the tungsten wire s
 
 
 
-
 ## Stepping up the level of analysis 
 
 A [Matlab code](https://gist.github.com/jallen30gt/8254e9ea2f938363dc0b) was developed to begin the initial processing of images.
@@ -43,7 +42,7 @@ The code was written with three simple objectives in mind:
 2.  Find the [First Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
 3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
 
-<br>
+
 <table>
 <tr>
   <td align="center">The results shown below are for smoothing applied <b>10 times</b>:</td>
@@ -55,7 +54,7 @@ The code was written with three simple objectives in mind:
   </tr>
 </table>
 
-<br>
+
 
 ##What did we learn?
 
@@ -77,16 +76,17 @@ and was written in collaboration with Tony Fast. Several features are different 
 *  [Matlab's imdilate function](http://www.mathworks.com/help/images/ref/imdilate.html) was used to [dialte](http://en.wikipedia.org/wiki/Dilation_(morphology))(i.e., find local maximum values) images
 *  Peaks were identified through dilation of the images and the peaks mapped to and identified on the original images 
 
-<br>
+
 
 ## Interface Overlaps
 The outcome of the second round of and more advanced image processing are shown below:
-<br>
-<br>
+
+
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/39630963" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
-<br>
+
+
 
 
 # Time Evolution of Raw Data 
@@ -106,23 +106,20 @@ Evolution of <b>columns 1-10</b> with time are shown below:
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/40270157" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
-<br>
+
 
 
 Evolution of <b>columns 448-468</b> with time are shown below:
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/40270198" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
-<br>
+
 
 
 Evolution of <b>columns 555-580</b> with time are shown below:
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/40270227" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
-<br>
-<br>
-<br>
 
 
 # Time Derivative of Raw Data 
@@ -131,7 +128,7 @@ We also take the derivative of the data with time, but the resulting plot does n
 extremely noisy. We have to figure out a better filter and smoothing function to make that part useful, cause it can be 
 useful as anvalid evidence for use to figure out the layer evolve function.
 
-<br>
+
 
 
 # Peak Position Time Evolution
@@ -155,12 +152,12 @@ because there will only be one layer at the end?
 <iframe src="//www.slideshare.net/slideshow/embed_code/40276563" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
 
-<br>
+
 
 
 <iframe src="//www.slideshare.net/slideshow/embed_code/40276585" width="476" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 
-<br><br>
+
 
 
 
@@ -179,54 +176,40 @@ This image shows my initial efforts with the image truncated to the area of inte
 
 ![Segmentation Image](http://i.imgur.com/MH8CuxO.jpg "Segmentation image ran with 7 peaks and 250 bins")
 
-<br>
 
 
 The image has been cropped to focus on a region of interest; that which we suspect is the evolvoing tri-oxide hydrate layer. 
 For comparison sake, here is the orinal image deliniating the area of interest.
 
-<br>
+
 
 ![Alt text](http://i.imgur.com/dExZKTw.jpg "Original image showing area of interest")
 
 
-<br><br>
+
 
 As you can see, the peak finding and fitting have some not so nice errors associated with conditions input.
 
-<br>
+
 
 ![Alt text](http://i.imgur.com/RN7GadD.jpg "Segmentation histogram plot ran with 7 peaks and 250 bins")
 
 
-<br>
+
 
 ## How does this relate to what has been done?
 
 So, in reference to the segmented image, this image below represents the origianl image overlayed with the first spatial
 derivative [work we did a couple of weeks prior.](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/09/26/Interface-Analysis.html)
 
-<br>
+
 
 
 ![Alt text](http://i.imgur.com/Uk25D1G.jpg "Original image overlayed with first spatial derivative data")
 
 
-<br>
+
 
 I believe it is interesting to note that there whether we are taking numerical derivatives over the data or segmenting the data,
 we find a simialar trend in this tri-oxide hydrate layer. 
                             
-                        
-
-                            
-                        
-
-                            
-                            
-                        
-      
-                            
-                        
-
-                        
