@@ -199,53 +199,78 @@ The results shown below are for maximum value of the time derivative peak (for a
 
 # Initial Attempts at Data Segmentation
 
-For this trail run at segmentation, I used the matlab code developed by [Dr. Tom O'Haver ](http://terpconnect.umd.edu/~toh/) for 
-peak fitting and the [naive segmentation](https://gist.github.com/tonyfast/de3d7b841cea38dc40fa) code written by Tony. I also 
-used different matlab filters and smoothing functions to smooth the data (imfilter in tandom with fspecial, imresize, wiener2).
-I varied the number of peaks between 3 and 8 and varied the number of bins from 10 to 1000. This provided extremely tedious. 
-For this post, I settled for an image capture with the following values:
+For this trail run at segmentation, MATLAB codes developed by [Dr. Tom O'Haver ](http://terpconnect.umd.edu/~toh/) for 
+peak fitting and [naive segmentation](https://gist.github.com/tonyfast/de3d7b841cea38dc40fa) code written by Tony Fast were used.
+Different MATLAB filters and smoothing functions were used in tandem with these codes to smooth the data (e.g. MATLAB's 
+imfilter in tandom with fspecial, imresize, wiener2).  The codes take in as inputs the image to be analyzed as well as:
+
+1.  A user specified number of peaks - The program takes signals from the input image and attempts to decompose a complex
+signal generated out of the image data into a user specified number (the number of peak inputs) of component signals.  This
+is an attempt to see if the image data can be represented as a sum of more elementary signal functions with the peaks, in 
+case, representing the boudaries of the transition layers.
+
+2.  A user specified number of bins - The program divides the signals based off the intensities into a number (the number 
+of bin inputs) of distributions to aid in the decomposition of the complex signal from the image data.
+
+The number of peaks were varied between 3 and 8 and varied the number of bins from 10 to 1000.  For the initial attempt at
+segmentation, the following inputs were used:
 
 __{{site.data['segmentation']}}__
 
 <br>
-This image shows my initial efforts with the image truncated to the area of interest:
+This image below is a result of the initial segmentation efforts with the image truncated to the area of interest. At this
+point segmentation was applied to the entire image, butfuture work will trucate the image using previous analysis outcomes 
+before segmenting the image to try and better fit the data; as has been mentioned, residual noise in the data is greatly
+affecting segmentation outcomes (even with smoothing) and some of the image must be removed:
 
 ![Segmentation Image](http://i.imgur.com/MH8CuxO.jpg "Segmentation image ran with 7 peaks and 250 bins")
 
 <br>
 
 
-The image has been cropped to focus on a region of interest; that which we suspect is the evolvoing tri-oxide hydrate layer. 
-For comparison sake, here is the orinal image deliniating the area of interest.
+As was mentioned, the image has been cropped to focus on a region of interest; that region which is susptected to be 
+the evolvoing tri-oxide hydrate layer.  For comparison sake, here is the orinal image deliniating the area of interest.
 
 <br>
 
-![Alt text](http://i.imgur.com/dExZKTw.jpg "Original image showing area of interest")
+!["Original image showing area of interest"](http://i.imgur.com/dExZKTw.jpg "Original image showing area of interest")
 
 
 <br><br>
 
-As you can see, the peak finding and fitting have some not so nice errors associated with conditions input.
+As can be seen, the peak finding and fitting have some not so nice errors with conditions input.  Again, it is suspected that
+the residual noise in the image is greatly affecting segmentation efforts:
 
 <br>
 
-![Alt text](http://i.imgur.com/RN7GadD.jpg "Segmentation histogram plot ran with 7 peaks and 250 bins")
+!["Segmentation Histogram"](http://i.imgur.com/RN7GadD.jpg "Segmentation histogram plot ran with 7 peaks and 250 bins")
 
 
 <br>
 
 ## How does this relate to what has been done?
 
-So, in reference to the segmented image, this image below represents the origianl image overlayed with the first spatial
-derivative [work we did a couple of weeks prior.](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/09/26/Interface-Analysis.html)
+In reference to the segmented image, the image below represents the origianl image overlayed with the first spatial
+derivative.  When compared to the segmented image, there is a nice visual fit indicating the transition region. 
 
 <br>
 
 
-![Alt text](http://i.imgur.com/Uk25D1G.jpg "Original image overlayed with first spatial derivative data")
+!["Original Image with Spatial Derivative"](http://i.imgur.com/Uk25D1G.jpg "Original image overlayed with first spatial derivative data")
 
 
 <br>
 
-I believe it is interesting to note that there whether we are taking numerical derivatives over the data or segmenting the data,
-we find a simialar trend in this tri-oxide hydrate layer. 
+It is interesting to note that whether the numerical derivatives are applied over the data or segmentation algorithm,
+a simialar trend is found in this tri-oxide hydrate layer/transition region.   Also interesting to note is that the data 
+seems to indicate multi-layering which, based off the electron transmission intesities, could indicate multi-phase regions.
+
+## What is next?
+
+ -  We want to truncate the images and focus on narrower bands around the transition region before running analysis.  We hope this will eliminate 
+ some of the errors we are getting in the segmentaiton outputs.  This task will be a little complicated as the number of peaks and bins
+ for the segmentation algorithm will change along with the data.  
+ -  We then will begin running n-point statistics and correlations
+ 
+ These steps will take some time, so we do not have a working time frame on the length of these tasks.  Further updates will be
+ put together and provided after these steps.  Please let us know if you have any questions or have any feedback.
