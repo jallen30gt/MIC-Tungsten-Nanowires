@@ -24,8 +24,7 @@ Initial processing of images was conducted using [Image J](http://imagej.nih.gov
 the National Institute of Health.  All images have 1024 rows of pixels and 1024 columns of pixels with each pixel representing
 an area of approximately 38.9 nm by 38.9 nm.  [Line plots](http://www.icoachmath.com/math_dictionary/line_plot.html)
 were created to measure the inverted gray scale signal intensities of all pixels across the entire width (all pixel columns) 
-of the image and averaged across pixel 
-rows 330 - 370.  As the [2-D tomography](http://en.wikipedia.org/wiki/Electron_tomography) data is a measure of the intensities of detected electrons 
+of the image and averaged across pixel rows 330 - 370.  As the [2-D tomography](http://en.wikipedia.org/wiki/Electron_tomography) data is a measure of the intensities of detected electrons 
 through the material, it is exptected that the line plots will yield information regarding the transition zones around the 
 surface of the tungsten wire sample and the evolvig tungsten-trioxide-hydrate layer.  Below is the initial line diagrams 
 (using the raw data) for the sample at 0%, 50% and 100% completion through the tungsten-trioxide-hydrate growth process.
@@ -49,15 +48,19 @@ images. The code was written with three simple objectives in mind:
     <br>
             $$x_{avg} = \frac{x_{i+1} + x_{i-1}}{2}$$
     <br>
+    Where $$x_{i+1}= data at column i+1, x_{i-1}= data at column i-1$$ 
     <br>
 2.  Find the [First Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
     <br>
             $$f^{'}(x_i)=\frac{-f(x_{i+2})+8f(x_{i+1})-8f(x_{i-1})+f(x_{i-2})}{12h}$$
     <br>
+    Where $$x_{i+2}= data at column i+2, x_{i+1}= data at column i+1, x_{i-1} = data at column i-1, x_{i-2}= data at column i-2, h=1$$ 
     <br>
 3.  Find the [Second Derivative](http://en.wikipedia.org/wiki/Finite_difference#Relation_with_derivatives) (numerical using centered finite-divided-difference formulas)
     <br>
             $$f^{''}(x_i)=\frac{-f(x_{i+2})+16f(x_{i+1})-30f(x_i)+16(x_{i-1})-f(x_{i-2})}{12h^2}$$
+    <br>
+    Where $$x_{i+1}= data at column i+1, x_{i+1}= data at column i+1, x_{i}= data at column i, x_{i-1} = data at column i-1, x_{i-2}= data at column i-2, h=1$$ 
     
 <br>
 <table>
