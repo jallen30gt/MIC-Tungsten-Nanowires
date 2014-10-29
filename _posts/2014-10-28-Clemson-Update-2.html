@@ -21,12 +21,9 @@ references:
 # Initial Surface Analysis
 
 Initial processing of images was conducted using [Image J](http://imagej.nih.gov/ij/), an image software package developed at
-the National Institute of Health.  All images have 1024 rows of pixels and 1024 columns of pixels with each pixel representing
-an area of approximately 38.9 nm by 38.9 nm.  [Line plots](http://www.icoachmath.com/math_dictionary/line_plot.html)
+the National Institute of Health.  [Line plots](http://www.icoachmath.com/math_dictionary/line_plot.html)
 were created to measure the inverted gray scale signal intensities of all pixels across the entire width (all pixel columns) 
-of the image and averaged across pixel rows 330 - 370.  As the [2-D tomography](http://en.wikipedia.org/wiki/Electron_tomography) data is a measure of the intensities of detected electrons 
-through the material, it is exptected that the line plots will yield information regarding the transition zones around the 
-surface of the tungsten wire sample and the evolvig tungsten-trioxide-hydrate layer.  Below is the initial line diagrams 
+of the image and averaged across pixel rows 330 - 370.  Below is the initial line diagrams 
 (using the raw data) for the sample at 0%, 50% and 100% completion through the tungsten-trioxide-hydrate growth process.
 
 <br>
@@ -77,16 +74,13 @@ smaller, slope deviation, is also highlighted from the earlier mentioned unexpla
 derivative of this data shows signs of peak splitting which appears to fit nicely with a possible developing two boundary region.
 Similar trends appear for the smoothed data plot at 100% completion (time = 155 seconds) which shows three prominent slopes and the 
 first derivative of this data showing three peaks which fit nicely with a possible three boundary region.
-
-Application of the simple smoothing algorithm 500 times did a very nice job of smoothing the data, but eliminates all of the interesting features of the plots.  Over-smoothing 
-tends to eliminate adjacent (split) peaks and tends to move slopes from the raw data towards the same value.       
+    
 
 ## Further Refinement of Image Processing
 
 The outputs of more aadvanced image processing can be seen below for data at 0% (time = 1s), approximately 50% (times = 76-82s) and 100% completion
 (time - 155s).  Shown are the peaks of the first derivatives of the data taken acorss the width of each image for each
-individual row of the images (not averaged down each row such as was conducted in earlier analysis).  Each first derivative 
-peak (in a given row) is then mapped onto the image at the column position at which the peak was located.  As a point of 
+individual row of the images.  Each first derivative peak (in a given row) is then mapped onto the image at the column position at which the peak was located.  As a point of 
 clarification, images are rotated 90 degrees counterclockwise from their initial orientation (as shown earlier) 
 and are cropped around the boundary region in an attempt to reduce the high noise levels (discussed earlier) at the edges 
 of the edges of the images. Thus, when the term row or column is used here, it is meant in relation to the original orienations
@@ -115,17 +109,13 @@ growth region.
 
 The second step of image processing involves evaluating the evolution of the tugsten-trioxide-hydrate layer over time. 
 Differences in pixels of the image are plotted over time in an attempt to give information about what areas of the image change
-in a major way. As the difference in time between images represents 1 second, these differences represent a first order 
-derivative with time.  Once the regions of major change are pinpointed, this information will be used to narrow the regions 
+in a major way. Once the regions of major change are pinpointed, this information will be used to narrow the regions 
 of focus within the image for analysis.  As was mentioned earlier, the images do contain considerable noise (even after 
 simple smoothing) that hinders computational analysis.
 
-First, the pixel values (from rows 500 to 600) of each column of each picture are averaged; averaging occurs down a specific
-column. There are 1024 columns for each image and so there are 1024 graphs, with each graph representing the average of a 
-specific column of pixel values (e.g. column 1 of each image averaged over pixel rows 500 to 600) as y and the time as x.
-As can be seenbelow, at low column numbers there is no trend.  The difference in average pixel values is relatively flat
-which is as expected because from 0% completion to 100% completion, the tungsten does not change over time.  Moving right 
-towards to middel sections of the image (e.g. pixel columns approximatel 350 - 600), noticable changes occurs as the transition layer
+The difference in average pixel values is relatively flat which is as expected because from 0% completion to 100% completion, 
+the tungsten does not change over time.  Moving right 
+towards to middle sections of the image (e.g. pixel columns approximatel 350 - 600), noticable changes occurs as the transition layer
 evolves with time. Between pixels columns of approximately 350 and 500, the data takes on an exponential shape and gradually evolves
 towards the shape of a logistic function from approximately pixel columns 500 to 600. This indicates that for future analysis
 we may want to localize the pixel columns for analysis to approximately columns 350 - 650.
@@ -175,9 +165,10 @@ The results shown below are for maximum value of the time derivative peak (for a
 
 # Initial Attempts at Data Segmentation
 
-Images were also ran through a naive segmentation algorithm in an attempt to verify the possible layers identified using
-numerical derivatives of the data.  This image below is a result of the initial segmentation efforts with the image truncated to the area of interest. At this
-point segmentation was applied to the entire image, butfuture work will trucate the image using previous analysis outcomes 
+Images were also ran through a naive segmentation algorithm in an attempt to utilize other means in identifying 
+the possible layers (that is other than using numerical derivatives of the data).  This image below is a result of the 
+initial segmentation efforts with the image truncated to the area of interest. At this
+point segmentation was applied to the entire image, but future work will trucate the image using previous analysis outcomes 
 before segmenting the image to try and better fit the data; as has been mentioned, residual noise in the data is greatly
 affecting segmentation outcomes (even with smoothing) and some of the image must be removed:
 
