@@ -1,20 +1,16 @@
 {
   "segmentation data":
-      {
         "Image Number 1": 
           - 0
           - 78
-          - 155,
+          - 155
         "Number of Peaks 1": 
           - 3
           - 4
-          - 4,
+          - 4
         "Number of Bins 1": 
           - 100
           - 20
           - 100
-          
-      },
-      
-    "smoothing method": imresize  
+        "smoothing method": imresize  
 } 
