@@ -1,0 +1,19 @@
+{
+  "segmentation data":
+      {
+        "Image Number": 0,
+        "Number of Peaks": 3,
+        "Number of Bins": 100
+      },
+      {
+        "Image Number": 78,
+        "Number of Peaks": 4,
+        "Number of Bins": 20
+      },
+      {
+        "Image Number": 155,
+        "Number of Peaks": 7,
+        "Number of Bins": 100
+      },
+    "smoothing method": imresize  
+} 
