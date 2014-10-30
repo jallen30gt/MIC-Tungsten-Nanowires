@@ -1,13 +1,13 @@
 "segmentation data":
-        "Image Number 1": 
+        "Image Number": 
           - 0
           - 78
           - 155
-        "Number of Peaks 1": 
+        "Number of Peaks": 
           - 3
           - 4
           - 4
-        "Number of Bins 1": 
+        "Number of Bins": 
           - 100
           - 20
           - 100
