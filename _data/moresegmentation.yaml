@@ -4,12 +4,12 @@
           - 78
           - 155
         "Number of Peaks": 
-          - 3
           - 4
-          - 4
+          - 6
+          - 6
         "Number of Bins": 
-          - 100
-          - 20
-          - 100
+          - 150
+          - 300
+          - 350
         "smoothing method": imresize  
 
