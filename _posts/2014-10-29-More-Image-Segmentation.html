@@ -18,6 +18,14 @@ Results of the Segmentation Algorithm for the Image at 78 Seconds:
  ![Segmentaiton at 78 Seconds](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2010%2029%20-%20New%20Image%20Segmentation/Segmentation%20Time%2078.jpg?token=AIHJ7FZruqDD_C9xvKx1-FCDyzBso-EJks5UXYTEwA%3D%3D)
 
 
+## Refining the Segmentation Inputs
+
+To eleminate some of the noise from the segmentation analysis, we had to reduce the amount of image that went was input
+into the segmentation algorithm.  We used our [time derivative analysis](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/10/14/Time-Evolution.html)
+to aid in this decision.  We also have an abberation in our images that affects our segmentation analysis as well.  Using 
+both of these pieces of information, we decided on running our segmentation analys on rows 200 - 700 and columns 400 - 700 on 
+each of the images.
+
 Original Image at 78 Seconds: 
  ![Original image at 78 Seconds](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2010%2029%20-%20New%20Image%20Segmentation/00600078.jpg?token=AIHJ7K8YJiTEl-fB_OXypTfh9FZPAQPIks5UXYaCwA%3D%3D) 
 
