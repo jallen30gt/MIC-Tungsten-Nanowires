@@ -27,9 +27,14 @@ Original Image at 78 Seconds:
 To eleminate some of the noise from the segmentation analysis, we had to reduce the amount of image that went was input
 into the segmentation algorithm.  We used our [time derivative analysis](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/10/14/Time-Evolution.html)
 to aid in this decision.  We also have an abberation in our images that affects our segmentation analysis as well.  Using 
-both of these pieces of information, we decided on running our segmentation analys on rows 200 - 700 and columns 400 - 700 on 
-each of the images.
+the time derivative analysis, we decided on running our segmentation analysis on columns 400 - 700 of each of the images.  To 
+reduce the noise in data due to the abberation, we decided on further limiting each image to rows 200 - 500.
 
+Using this, we conducted segmentation analysis on 3 samples:  
+-  0% completion
+-  50% completion
+-  100%completion
 
+Our input parameters in terms of the number of peaks and number of bins for the segmentation algorithm are as follows:
 
 __{{site.data['moresegmentation']}}__
