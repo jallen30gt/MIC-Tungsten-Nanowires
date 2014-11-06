@@ -10,9 +10,10 @@ latex: true
 
 #  Image Time Derivatives 
 
-Images have been smoothed over time using an averaging weighting function:
+Images derivates have been taken on raw images and smoothed images.  As the time step between images are 1 second, our derivative
+is exactly the difference between consecutive images:
 
-$$A_{i}(smooth) = \frac{(0.5(A_{i+1})+A_{i}+0.5(A_{i-1}))}{2}$$
+$$A_{i}(derivative) = {(A_{i+1}-A_{i})}$$
 
 
 ## Image Time Derivatives for Raw Image Data
