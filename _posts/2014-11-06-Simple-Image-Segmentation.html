@@ -1,0 +1,64 @@
+---
+layout: post
+title: Simple Segmentation
+tagline: simple image segmentation
+author: jallen30gt
+date:   2014-11-06 20:55:00
+latex: true
+
+---
+# Naive Segmentation
+
+Multiple attempts ([1](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/10/17/Image-Segmentation.html), [2](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/10/31/More-Image-Segmentation.html))
+have been made at using the [naive segmentation (or Gaussian maximum likelihood)](http://materials-informatics-lab.github.io/2014/10/14/Image-Segmentation.html)
+algorithms to segment our images.  This process is slow, tedious and quite frankly frustrating.  Many hours have been spent
+in attempts to segment 3 images (0%, 50% and 100% completion) and we would like to segment all images expediently (at least more so
+than previous attempts).
+
+To combat this issues, we attempt a simple segmentation.  Essentially, we are dividing the max and min values in to bracketed 
+ranges as follows (Note:  because we have used mat2gray function in MATLAB, our values range from 0 -1):
+
+-  values < .1 = 0
+-  values > .1 & values < .3 = .2
+-  values > .3 & values < .5 = .4
+-  values > .5 & values < .7 = .6
+-  values > .7 & values < .9 = .8
+-  values > .9 = 1
+
+While we understand that the Gaussian maximum likelihood algorith offers the user more options and control in fitting data,
+time is of the essence and we need a quicker way to subjectively view the behavior of our data over time.  Below are the smoothed
+images and segmented images for 0%, 50%, and 100% completion:
+
+
+Image at 0% Completion, Smoothed and mat2gray Applied:
+
+![0% Completion, smoothed with mat2gray applied](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2011%2006%20-%20smoothimagesgray/img1.jpeg?token=AIHJ7HyvlaYGidlmt1JiYhb9EdgBrIcYks5UZUMwwA%3D%3D)
+
+
+Image segmented at 0% Completion:
+
+![0% Completion segmentation](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2011%2006%20-%20segment/1.jpeg?token=AIHJ7Efi2p1UKnBGvanTt6ke3R6sTiNWks5UZV9dwA%3D%3D)
+
+
+
+
+Image at 50% Completion,Smoothed and mat2gray Applied:
+
+![50% Completion, smoothed with mat2gray applied](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2011%2006%20-%20smoothimagesgray/img76.jpeg?token=AIHJ7JcHH9qZSpL8M9QomnrI39mcHMhfks5UZUNswA%3D%3D)
+
+
+Image segmented at 50% Completion:
+
+![50% Completion segmentation](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2011%2006%20-%20segment/76.jpeg?token=AIHJ7DItTZdXI1zY6bROtUS8lsKYIh4pks5UZV-UwA%3D%3D)
+
+
+
+
+Image at 100% Completion, Smoothed and mat2gray Applied:
+
+![100% Completion, smoothed with mat2gray applied](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2011%2006%20-%20smoothimagesgray/img153.jpeg?token=AIHJ7COw8QhIKZIKPBwytc8VvX763aRHks5UZUNSwA%3D%3D)
+
+
+Image segmented at 100% Completion:
+
+![100% Completion segmentation](https://raw.githubusercontent.com/jallen30gt/Research-Assets/master/2014%2011%2006%20-%20segment/152.jpeg?token=AIHJ7KQnFNo6FnPPPG-vziO1FOR3UcV0ks5UZV9ywA%3D%3D)
