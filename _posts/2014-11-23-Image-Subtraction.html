@@ -6,20 +6,52 @@ author: jallen30gt
 date:   2014-11-23 00:00:00
 latex: true
 
+references:
+- http://www.mathworks.com/help/images/ref/imadjust.html
+- http://www.mathworks.com/help/images/ref/imcomplement.html
+- http://www.mathworks.com/help/images/ref/imdilate.html
+- http://www.mathworks.com/help/images/ref/imerode.html
+- http://www.mathworks.com/help/images/ref/imgradient.html
+
 ---
 
 
 # Image Subtraction
 
+<br><br>
+
+Step 1: We find the grayscale image we want to work on (Call it A)
+
 ![Original Image A](http://i.imgur.com/s5e62wp.jpg)
 
+<br><br>
+Step 2: We use [IMADJUST](http://www.mathworks.com/help/images/ref/imadjust.html) on the image (Call it B)
 ![IMADJUST of Image A (B)](http://i.imgur.com/2xbaLjf.jpg)
 
+
+<br><br>
+Step 3: We use [IMCOMPLEMENT](http://www.mathworks.com/help/images/ref/imcomplement.html) on image A (Call it C)
 ![Complement of Image A (C)](http://i.imgur.com/suVMUY9.jpg)
 
+<br><br>
+Step 4: We use [IMADJUST](http://www.mathworks.com/help/images/ref/imadjust.html) on the image B (Call it D)
 ![IMADJUST of Complement of Image A (D)](http://i.imgur.com/QmdoM4B.jpg)
 
-
+<br><br>
+Step 5: We use subtract image D from Image C (Call it E)
 ![Subtraction of Image D from Image C (E)](http://i.imgur.com/mV71tD8.jpg)
 
-![Complement of Image E](http://i.imgur.com/661Hhqy.jpg)
+
+<br><br>
+Step 6:  We use [IMCOMPLEMENT](http://www.mathworks.com/help/images/ref/imcomplement.html) on image E (Call it F)
+![Complement of Image E (F)](http://i.imgur.com/661Hhqy.jpg)
+
+
+<br><br>
+
+Notes:  
+  - You can play with thresholding values to decrease or increase mid-range pixel values
+  - You can use [IMDILATE](http://www.mathworks.com/help/images/ref/imdilate.html) or [IMERODE](http://www.mathworks.com/help/images/ref/imerode.html)
+  to thicken or thin lines
+  - You can use in tandem with Canny Edge Detection software to pick up some of the edges that the Canny Edge Detection missed.
+  - Seems to work really well with [image derivatives](http://www.mathworks.com/help/images/ref/imgradient.html)
