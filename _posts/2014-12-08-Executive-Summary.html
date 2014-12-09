@@ -56,10 +56,24 @@ Our tactics fall into two directions:
 
 ### Spatial Differentiation
 
+Spatial differentiation was conducted employing the following methods:
+
+*  Gaussian smoothing (convolution operator) – to reduce noise in the image data
+*  Spatial numerical derivatives across images (image gradients) – to find where image data changes the most
+*  Obtaining image gradient compliment image for [Image/Image Complement subtraction](http://jallen30gt.github.io/MIC-Tungsten-Nanowires/2014/11/23/Image-Subtraction.html)
+*  Image/Image Complement subtraction - to pinpoint phase boundary layers
+
 ![Workflow for Spatial Differentiation](http://i.imgur.com/TrIYVvJ.jpg)
 
 
 ### Temporal Differentiation
+
+Temporal differentiation was conducted employing the following methods:
+
+*  Gaussian smoothing (convolution operator) – to reduce noise in the image data 
+*  Numerical derivatives across pixels through time – highlights and broadens the changes in the image data
+*  Contrasting the image intensities to highlight salient features for Canny Edge detection
+*  Canny Edge detection – to pinpoint phase boundary layers
 
 ![Workflow for Temporal Differentiation](http://i.imgur.com/U6BSlUp.jpg)
 
